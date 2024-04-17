@@ -6,7 +6,7 @@ class Calculator:
     def soma(self , a, b):
         return
     
-    def subtracao(self):
+    def subtracao(self,a,b):
         return
     
     def multiplicacao(self):
