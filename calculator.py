@@ -4,10 +4,12 @@ class Calculator:
         pass
     
     def soma(self, a, b):
-       
+        resultado = a + b
+        return resultado
     
     def subtracao(self, a, b):
-        
+        resultado = a - b
+        return resultado
     
     def multiplicacao(self):
         return
