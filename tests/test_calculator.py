@@ -3,35 +3,37 @@ from calculator import Calculator
 
 class Test_calculator(unittest.TestCase):
     
-    @test
     def test_soma(self):
-        c = Calculator(2, 8)
-        self.assertEqual(c.soma(), 10)
+        c = Calculator()
+        self.assertEqual(c.soma(2, 8), 10)
         
     def test_soma_2(self):
-        c = Calculator(-3, 7)
-        self.assertEqual(c.soma(), 4)
+        c = Calculator()
+        self.assertEqual(c.soma(-3, 7), 4)
 
     def teste_soma_3(self):
-        c = Calculator(-3, -4)
-        self.assertEqual(c.soma(), -7)
+        c = Calculator()
+        self.assertEqual(c.soma(-3, -4), -7)
 
     def teste_soma_4(self):
-        c =  Calculator(0, 10)
-        self.assertEqual(c.soma(), 10)
+        c =  Calculator()
+        self.assertEqual(c.soma(0, 10), 10)
 
     def teste_subtracao(self):
-        c = Calculator(2, 8)
-        self.assertEqual(c.subtracao(), 6)
+        c = Calculator()
+        self.assertEqual(c.subtracao(2, 8), -6)
 
     def teste_subtracao_2(self):
-        c = Calculator(-3, 7)
-        self.assertEqual(c.subtracao(), -10)
+        c = Calculator()
+        self.assertEqual(c.subtracao(-3, 7), -10)
 
     def teste_subtracao_3(self):
-        c = Calculator(-3, -4)
-        self.assertEqual(c.subtracao(), 1)
+        c = Calculator()
+        self.assertEqual(c.subtracao(-3, -4), 1)
 
     def teste_subtracao_4(self):
-        c = Calculator(0, 10)
-        self.assertEqual(c.subtracao(), -10)
+        c = Calculator()
+        self.assertEqual(c.subtracao(0, 10), -10)
+
+if __name__ == '__main__':
+    unittest.main()
