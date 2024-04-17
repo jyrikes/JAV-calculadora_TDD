@@ -19,3 +19,19 @@ class Test_calculator(unittest.TestCase):
     def teste_soma_4(self):
         c =  Calculator(0, 10)
         self.assertEqual(c.soma(), 10)
+
+    def teste_subtracao(self):
+        c = Calculator(2, 8)
+        self.assertEqual(c.subtracao(), 6)
+
+    def teste_subtracao_2(self):
+        c = Calculator(-3, 7)
+        self.assertEqual(c.subtracao(), -10)
+
+    def teste_subtracao_3(self):
+        c = Calculator(-3, -4)
+        self.assertEqual(c.subtracao(), 1)
+
+    def teste_subtracao_4(self):
+        c = Calculator(0, 10)
+        self.assertEqual(c.subtracao(), -10)
