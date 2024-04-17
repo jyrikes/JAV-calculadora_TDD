@@ -3,24 +3,29 @@ class Calculator:
     def __init__(self) -> None:
         pass
     
-    def soma():
+    def soma(self , a, b):
         return
     
-    def subtracao():
+    def subtracao(self):
         return
     
-    def multiplicacao():
+    def multiplicacao(self):
         return
     
-    def divisao():
+    def divisao(self):
         return
     
-    def potencia():
+    def potencia(self):
         return
     
-    def raiz_quadrada():
+    def raiz_quadrada(self):
         return
     
-    def fatorial():
+    def fatorial(self):
         return
+    
+    def resto_divisao(self):
+        return 
+    
+    
         
