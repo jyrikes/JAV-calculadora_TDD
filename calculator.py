@@ -3,11 +3,13 @@ class Calculator:
     def __init__(self) -> None:
         pass
     
-    def soma(self , a, b):
-        return
+    def soma(self, a, b):
+        resultado = a + b
+        return resultado
     
-    def subtracao(self,a,b):
-        return
+    def subtracao(self, a, b):
+        resultado = a - b
+        return resultado
     
     def multiplicacao(self):
         return
@@ -26,6 +28,7 @@ class Calculator:
     
     def resto_divisao(self):
         return 
+    
     
     
         
