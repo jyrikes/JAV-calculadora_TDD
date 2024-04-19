@@ -13,8 +13,13 @@ class Calculator:
     def multiplicacao(self):
         return
     
-    def divisao(self, dividendo,divisor):
+    def divisao(self, dividendo,divisor,precisao):
         
+        if isinstance(dividendo, float) and isinstance(divisor,float):
+            fator_precisao = 10**precisao
+            dividendo = dividendo * fator_precisao
+            divisor = divisor * fator_precisao
+            
         return dividendo / divisor
     
     def divisao_inteira(self):

@@ -10,8 +10,12 @@ class Test_calculator(unittest.TestCase, Calculator):
         self.assertEqual(self.soma(2, 8), 10)
         
     def test_divisao_inteira(self):
-        
-        self.assertEqual(self.divisao(10,5),2)
+        self.assertEqual(self.divisao(10,5,2),2)
+    
+    def test_divisao_float(self):
+        self.assertEqual(self.divisao(1.2,0.1,2),12)
+    
+  
         
 
 if __name__ == '__main__':
