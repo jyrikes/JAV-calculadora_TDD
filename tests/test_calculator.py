@@ -18,6 +18,20 @@ class Test_calculator(unittest.TestCase, Calculator):
     def teste_soma_string(self):
         with self.assertRaises(ValueError):
             self.soma("abc", 2)
+
+    # Testes para metodo de subtração (sub)
+    def test_sub_positivos(self):
+        self.assertEqual(self.subtracao(2, 8), 6)
+
+    def test_sub_negativos(self):
+        self.assertEqual(self.subtracao(-6, -5), -1)
+
+    def test_sub_float(self):
+        self.assertEqual(self.subtracao(-6.5, 10), -16.5)
+
+    def test_sub_string(self):
+        with self.assertRaises(ValueError):
+            self.subtracao(-6, "abc")
         
     def test_divisao_inteira(self):
         self.assertEqual(self.divisao(10,5,2),2)
