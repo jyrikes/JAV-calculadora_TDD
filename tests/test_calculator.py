@@ -48,8 +48,14 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_restoErrorZero(self):
         self.assertRaises(ZeroDivisionError, self.resto_divisao, 10, 0)
 
-    def test_resto_divisao_4(self):
-        self.assertRaises(self.resto_divisao, 10, "a")
+    def test_restoErrorStringA(self):
+        self.assertRaises(ValueError, self.resto_divisao, "a", 10)
+
+    def test_restoErrorStringB(self):
+        self.assertRaises(ValueError, self.resto_divisao, 10, "b")
+
+    def test_restoErrorStringAB(self):
+        self.assertRaises(ValueError, self.resto_divisao, "a", "b")
 
 if __name__ == '__main__':
     unittest.main()
