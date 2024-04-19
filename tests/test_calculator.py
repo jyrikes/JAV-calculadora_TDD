@@ -5,9 +5,19 @@ class Test_calculator(unittest.TestCase, Calculator):
     
     def setUp(self):
         self.calculadora = Calculator()
-        
-    def test_soma(self):
+     # Testes para metodo de soma   
+    def test_soma_positivos(self):
         self.assertEqual(self.soma(2, 8), 10)
+
+    def teste_soma_negativos(self):
+        self.assertEqual(self.soma(-3, -4), -7)
+
+    def teste_soma_float(self):
+        self.assertEqual(self.soma(3.4, 7.3), 10.7)
+
+    def teste_soma_string(self):
+        with self.assertRaises(ValueError):
+            self.soma("abc", 2)
         
     def test_divisao_inteira(self):
         self.assertEqual(self.divisao(10,5,2),2)
