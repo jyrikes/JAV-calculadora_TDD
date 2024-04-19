@@ -74,7 +74,9 @@ class Test_calculator(unittest.TestCase, Calculator):
         
     def test_divinteira_zero(self):
         with self.assertRaises(ZeroDivisionError):
-            self.divisao(10,0)
+            self.divisao_inteira(10,0)
+    def test_divinteira_negativo(self):
+        self.assertEqual(self.divisao_inteira(-11,2),-5)
     def teste_rq(self):
         self.assertEqual(self.raiz_quadrada(9), 3)
     
