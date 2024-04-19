@@ -19,7 +19,6 @@ class Test_calculator(unittest.TestCase, Calculator):
         with self.assertRaises(ValueError):
             self.soma("abc", 2)
 
-    # Testes para metodo de subtração (sub)
     def test_sub_positivos(self):
         self.assertEqual(self.subtracao(2, 8), -6)
 
@@ -33,7 +32,6 @@ class Test_calculator(unittest.TestCase, Calculator):
         with self.assertRaises(ValueError):
             self.subtracao(-6, "abc")
 
-    #Testes para o metodo de multiplicação (mult)
     def test_mult_positivos(self):
         self.assertEqual(self.multiplicacao(3, 7), 21)
     
@@ -67,9 +65,11 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_none(self):
         with self.assertRaises(ValueError):
             self.divisao(None,None)
-   
+            
+    def test_divisao_negativas(self):
+        self.assertEqual(self.divisao(-1,-2),0.5)
+        
     
-    # testes para o método raiz_quadrada (RQ)
     def teste_rq(self):
         self.assertEqual(self.raiz_quadrada(9), 3)
     
