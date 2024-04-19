@@ -36,9 +36,13 @@ class Calculator:
     def divisao(self, dividendo,divisor,precisao = 1):
         
         if divisor == 0 :
-            raise(ZeroDivisionError)
+            raise ZeroDivisionError
         
-        if isinstance(dividendo, float) or isinstance(divisor,float):
+        elif isinstance(dividendo,str) or isinstance(divisor,str):
+            raise ValueError
+        
+        
+        elif isinstance(dividendo, float) or isinstance(divisor,float):
             fator_precisao = 10**precisao
             dividendo = dividendo * fator_precisao
             divisor = divisor * fator_precisao

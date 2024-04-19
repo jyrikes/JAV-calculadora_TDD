@@ -47,7 +47,7 @@ class Test_calculator(unittest.TestCase, Calculator):
         with self.assertRaises(ValueError):
             self.subtracao(27, "abc")
         
-    def test_divisao_inteira(self):
+    def test_divisao_por_inteiro(self):
         self.assertEqual(self.divisao(10,5,2),2)
     
     def test_divisao_float(self):
@@ -59,8 +59,12 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_por_zero(self):
         with self.assertRaises(ZeroDivisionError):
             self.divisao(10,0)
+            
+    def test_divisao_string(self):
+        with self.assertRaises(ValueError):
+            self.divisao('a',2)
     
-        
+   
     
     # testes para o método raiz_quadrada (RQ)
     def teste_rq(self):
