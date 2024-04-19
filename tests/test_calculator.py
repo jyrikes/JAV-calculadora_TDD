@@ -18,6 +18,10 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_inteira_sem_precisao(self):
        self.assertEqual(self.divisao(10,5),2)
        
+    def test_divisao_por_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            self.divisao(10,0)
+    
         
 
 if __name__ == '__main__':
