@@ -3,9 +3,8 @@ class Calculator:
     def __init__(self) -> None:
         pass
     
-    def soma(self, a, b):
-        resultado = a + b
-        return resultado
+    def soma(self, number1, number2):
+        return number1 + number2
     
     def subtracao(self, a, b):
         resultado = a - b
@@ -15,6 +14,9 @@ class Calculator:
         return
     
     def divisao(self):
+        return
+    
+    def divisao_inteira(self):
         return
     
     def potencia(self):
@@ -28,6 +30,8 @@ class Calculator:
     
     def resto_divisao(self):
         return 
+    
+    
     
     
     
