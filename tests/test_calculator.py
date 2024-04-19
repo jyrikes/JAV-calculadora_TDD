@@ -5,9 +5,47 @@ class Test_calculator(unittest.TestCase, Calculator):
     
     def setUp(self):
         self.calculadora = Calculator()
-        
-    def test_soma(self):
+     # Testes para metodo de soma   
+    def test_soma_positivos(self):
         self.assertEqual(self.soma(2, 8), 10)
+
+    def teste_soma_negativos(self):
+        self.assertEqual(self.soma(-3, -4), -7)
+
+    def teste_soma_float(self):
+        self.assertEqual(self.soma(3.4, 7.3), 10.7)
+
+    def teste_soma_string(self):
+        with self.assertRaises(ValueError):
+            self.soma("abc", 2)
+
+    # Testes para metodo de subtração (sub)
+    def test_sub_positivos(self):
+        self.assertEqual(self.subtracao(2, 8), -6)
+
+    def test_sub_negativos(self):
+        self.assertEqual(self.subtracao(-6, -5), -1)
+
+    def test_sub_float(self):
+        self.assertEqual(self.subtracao(-6.5, 10), -16.5)
+
+    def test_sub_string(self):
+        with self.assertRaises(ValueError):
+            self.subtracao(-6, "abc")
+
+    #Testes para o metodo de multiplicação (mult)
+    def test_mult_positivos(self):
+        self.assertEqual(self.multiplicacao(3, 7), 21)
+    
+    def test_mult_negativos(self):
+        self.assertEqual(self.multiplicacao(-5, -11), 55)
+
+    def test_mult_float(self):
+        self.assertEqual(self.multiplicacao(5.9, -11.5), -67.85)
+
+    def test_mult_string(self):
+        with self.assertRaises(ValueError):
+            self.subtracao(27, "abc")
         
     def test_divisao_inteira(self):
         self.assertEqual(self.divisao(10,5,2),2)
