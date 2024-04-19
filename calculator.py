@@ -12,9 +12,14 @@ class Calculator:
         
         return number1 + number2
     
-    def subtracao(self, a, b):
-        resultado = a - b
-        return resultado
+    def subtracao(self, number1, number2):
+        try:
+            number1 = float(number1)
+            number2 = float(number2)
+        except:
+            raise ValueError("Não é possivel fazer soma de algo diferente de um número")
+        
+        return number1 - number2
     
     def multiplicacao(self):
         return

@@ -21,7 +21,7 @@ class Test_calculator(unittest.TestCase, Calculator):
 
     # Testes para metodo de subtração (sub)
     def test_sub_positivos(self):
-        self.assertEqual(self.subtracao(2, 8), 6)
+        self.assertEqual(self.subtracao(2, 8), -6)
 
     def test_sub_negativos(self):
         self.assertEqual(self.subtracao(-6, -5), -1)
