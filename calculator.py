@@ -52,7 +52,8 @@ class Calculator:
         return dividendo / divisor
     
     def divisao_inteira(self,dividendo, divisor):
-        
+        if divisor == 0 :
+            raise ZeroDivisionError
         return dividendo // divisor
     
     
