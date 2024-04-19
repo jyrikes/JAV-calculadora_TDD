@@ -51,8 +51,10 @@ class Calculator:
             
         return dividendo / divisor
     
-    def divisao_inteira(self):
-        return
+    def divisao_inteira(self,dividendo, divisor):
+        
+        return dividendo // divisor
+    
     
     def potencia(self):
         return

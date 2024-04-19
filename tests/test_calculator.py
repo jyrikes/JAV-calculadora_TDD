@@ -51,7 +51,7 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_float(self):
         self.assertEqual(self.divisao(1.2,0.1,2),12)
     
-    def test_divisao_inteira_sem_precisao(self):
+    def test_divisao_por_inteiro_sem_precisao(self):
        self.assertEqual(self.divisao(10,5),2)
        
     def test_divisao_por_zero(self):
@@ -69,7 +69,10 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_negativas(self):
         self.assertEqual(self.divisao(-1,-2),0.5)
         
-    
+    def test_divinteira(self):
+        self.assertEqual(self.divisao_inteira(3,2),1)
+        
+        
     def teste_rq(self):
         self.assertEqual(self.raiz_quadrada(9), 3)
     
