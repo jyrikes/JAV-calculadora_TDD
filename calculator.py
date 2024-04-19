@@ -22,14 +22,22 @@ class Calculator:
     def potencia(self):
         return
     
-    def raiz_quadrada(self):
-        return
+    def raiz_quadrada(self, a):
+        if a < 0:
+            return "Não é possível calcular a raiz quadrada de um número negativo"
+        return a ** 0.5
     
-    def fatorial(self):
-        return
+    def fatorial(self, a):
+        if a == 0:
+            return 1
+        if a < 0:
+            return "Não é possível calcular o fatorial de um número negativo"
+        return a * self.fatorial(a - 1)
     
-    def resto_divisao(self):
-        return 
+    def resto_divisao(self, a, b):
+        if b == 0:
+            return "Não é possível dividir por zero"
+        return a % b
     
     
     
