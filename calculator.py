@@ -13,8 +13,9 @@ class Calculator:
     def multiplicacao(self):
         return
     
-    def divisao(self):
-        return
+    def divisao(self, dividendo,divisor):
+        
+        return dividendo / divisor
     
     def divisao_inteira(self):
         return
