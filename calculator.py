@@ -41,6 +41,8 @@ class Calculator:
         elif isinstance(dividendo,str) or isinstance(divisor,str):
             raise ValueError
         
+        elif dividendo is None or divisor is None:
+            raise ValueError
         
         elif isinstance(dividendo, float) or isinstance(divisor,float):
             fator_precisao = 10**precisao

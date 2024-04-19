@@ -63,7 +63,10 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_string(self):
         with self.assertRaises(ValueError):
             self.divisao('a',2)
-    
+            
+    def test_divisao_none(self):
+        with self.assertRaises(ValueError):
+            self.divisao(None,None)
    
     
     # testes para o método raiz_quadrada (RQ)
