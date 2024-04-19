@@ -13,9 +13,9 @@ class Calculator:
     def multiplicacao(self):
         return
     
-    def divisao(self, dividendo,divisor,precisao):
+    def divisao(self, dividendo,divisor,precisao = 1):
         
-        if isinstance(dividendo, float) and isinstance(divisor,float):
+        if isinstance(dividendo, float) or isinstance(divisor,float):
             fator_precisao = 10**precisao
             dividendo = dividendo * fator_precisao
             divisor = divisor * fator_precisao

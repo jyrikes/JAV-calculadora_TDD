@@ -15,7 +15,9 @@ class Test_calculator(unittest.TestCase, Calculator):
     def test_divisao_float(self):
         self.assertEqual(self.divisao(1.2,0.1,2),12)
     
-  
+    def test_divisao_inteira_sem_precisao(self):
+       self.assertEqual(self.divisao(10,5),2)
+       
         
 
 if __name__ == '__main__':
