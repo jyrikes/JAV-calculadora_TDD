@@ -17,12 +17,21 @@ class Calculator:
             number1 = float(number1)
             number2 = float(number2)
         except:
-            raise ValueError("Não é possivel fazer soma de algo diferente de um número")
+            raise ValueError("Não é possivel fazer subtração de algo diferente de um número")
         
         return number1 - number2
     
-    def multiplicacao(self):
-        return
+    def multiplicacao(self, number1, number2):
+        try:
+            number1 = float(number1)
+            number2 = float(number2)
+        except:
+            raise ValueError("Não é possivel fazer multiplicação de algo diferente de um número")
+        
+        #limitando o resultado a apenas duas casas decimais 
+        return round(number1 * number2, 2)
+        
+
     
     def divisao(self, dividendo,divisor,precisao = 1):
         
